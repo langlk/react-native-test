@@ -20,9 +20,6 @@ export default class StarWarsScreen extends React.Component {
   }
 
   render() {
-    let pic = {
-      uri: "https://media1.britannica.com/eb-media/28/148328-004-6AFF751A.jpg"
-    };
     let results = [];
     if (this.state.swapiResponse) {
       if (this.state.swapiResponse.results) {
