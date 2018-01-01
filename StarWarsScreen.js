@@ -36,6 +36,7 @@ export default class StarWarsScreen extends React.Component {
           style={{height: 40, width: 300}}
           placeholder="Enter a Star Wars character"
           onChangeText={(text) => this.setState({text})}
+          onSubmitEditing={() => this.searchStarWars()}
         />
         <Button
           onPress={() => this.searchStarWars()}
