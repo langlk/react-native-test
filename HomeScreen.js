@@ -5,7 +5,7 @@ import RootNavigator from './App.js';
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { location: '' };
+    this.state = { location: 'Fetching Location' };
     navigator.geolocation.getCurrentPosition(
       (position) => {
         locationString = `${position.coords.latitude}, ${position.coords.longitude}`;
@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World!!</Text>
+        <Text>Your location is:</Text>
         <Text>{this.state.location}</Text>
         <Text>Shake your phone to open the developer menu.</Text>
         <Button
