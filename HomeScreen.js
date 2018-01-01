@@ -35,6 +35,10 @@ export default class HomeScreen extends React.Component {
           onPress={() => this.props.navigation.navigate('WebTest')}
           title="To the internet!"
         />
+        <Button
+          onPress={() => this.props.navigation.navigate('StarWars')}
+          title="Search Star Wars!"
+        />
       </View>
     );
   }

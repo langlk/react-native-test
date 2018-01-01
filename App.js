@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen.js';
 import TarsierScreen from './TarsierScreen.js';
 import WebTestScreen from './WebTestScreen.js';
+import StarWarsScreen from './StarWarsScreen.js';
 
 const RootNavigator = StackNavigator(
   {
@@ -23,6 +24,12 @@ const RootNavigator = StackNavigator(
       screen: WebTestScreen,
       navigationOptions: {
         headerTitle: 'WebTest',
+      },
+    },
+    StarWars: {
+      screen: StarWarsScreen,
+      navigationOptions: {
+        headerTitle: 'StarWars',
       },
     },
   },
