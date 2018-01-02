@@ -3,11 +3,20 @@ import { StyleSheet, Text, View, WebView } from 'react-native';
 
 export default class WebTestScreen extends React.Component {
 
-  render() {
+  urlChange(webViewState) {
+    if (!webViewState.loading) {
+      if (webViewState.url === "https://planning-fallacy.herokuapp.com/") {
+        console.log(webViewState.url);
+        this.props.navigation.navigate('Home');
+      }
+    }
+  }
 
+  render() {
     return (
       <WebView
         source={{uri: 'https://planning-fallacy.herokuapp.com/'}}
+        onNavigationStateChange={this.urlChange.bind(this)}
       />
     );
   }
